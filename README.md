@@ -142,15 +142,4 @@ Esta es la forma más básica de Codint: archivos precompilados para un uso ráp
 If you're interested in contributing to this project, our docs are best places to start [https://codint.ronald-ramos.com/contributing](https://codint.ronald-ramos.com/contributing).
 
 <hr>
-
 <p align="center"> © 2023 Ronald Ramos. </p>
-           
-<p align="center">
-  <a href="https://fb.com/doolpool.company" target="blank">
-    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="doolpool.company" height="15" width="15" />
-  </a>
-  <a href="https://www.youtube.com/channel/uc1jwir5d3pgcdaxb2brdh3w" target="blank"> 
-    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg" alt="https://www.youtube.com/channel/uc1jwir5d3pgcdaxb2brdh3w" height="15" width="15" />
-  </a>
-</p>
-
