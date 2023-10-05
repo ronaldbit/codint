@@ -1,0 +1,251 @@
+ 
+.codint[data-mode=dark]{
+    --color-fonto: #272822 ;
+    --color-texto: white;
+    --color-borde: #891d1d;
+    --color-borde-b: #d3caca14; 
+    --color-activ: white;
+    --color-svguv: white;
+    --color-terminal: rgba(255, 255, 255, 0.031);
+    --color-theme: #009688;
+    --color-theme-b: #8ecd90;
+}
+
+.codint[data-mode=light]{
+    --color-fonto: white ;
+    --color-texto: black;
+    --color-borde: red;
+    --color-borde-b: #d3caca;
+    --color-activ: black;
+    --color-svguv: black;
+    --color-terminal: rgb(0 0 0 / 14%);
+    --color-theme: #009688;
+    --color-theme-b: #8ecd90;
+}
+
+._codint-active{
+    text-decoration: overline;
+    /**border-bottom: 1px solid var(--color-activ);**/
+}
+
+._codint-oculto{
+    display:none;
+}
+._codint-visible{
+    display:flex;
+}
+
+.codint svg{
+    fill:var(--color-svguv);
+}
+
+.codint span{
+    padding-left: 5px;
+}
+
+.codint a{
+    color: var(--color-theme);
+}
+.codint a:focus, a:hover {
+    color: var(--color-theme-b);
+}
+
+.codint {
+    --color-fonto: white ;
+    --color-texto: black;
+    --color-borde: red;
+    --color-activ: black;
+    --color-svguv: black;
+    
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;  
+    background-color: var(--color-fonto) ;
+    color: var(--color-texto) ; 
+    transition: transform 0.3s;
+    
+}
+
+.codint p{
+    
+margin: 0px 0px 0px 0px;
+
+}
+/* Estilos de la barra de desplazamiento para el elemento .codint y sus hijos */
+.codint::-webkit-scrollbar {
+  width: 10px; /* Grosor de la barra de desplazamiento vertical */
+  height: 10px; /* Grosor de la barra de desplazamiento horizontal */
+  background-color: #f0f0f0; /* Color de fondo de la barra de desplazamiento */
+}
+
+.codint::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color del "cursor" de la barra de desplazamiento */
+  border-radius: 5px; /* Redondea los bordes del "cursor" */
+}
+
+.codint::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del "cursor" cuando se pasa el mouse por encima */
+}
+
+
+._codint-top{
+    position: inherit;
+    border-top: 2px solid var(--color-borde);
+}
+
+._codint-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+._codint-menu-i{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+._codint-menu-op-c{
+    font-size: 10px;
+}
+._codint-menu-d{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+._codint-menu-i .op,
+._codint-menu-d .op{
+    padding: 0px 2px 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    color: var(--color-texto);
+    margin: 5px 2px 5px 2px;
+    cursor: default;
+}
+ 
+._codint-content{
+    border-top: 1px solid var(--color-borde);
+    height: 250px;
+}
+
+._codint-content[data-mode=true]{display:none;}
+
+._codint-content_files{
+    width: 100%;
+    height: 100%;
+}
+
+
+._codint-content_files_files{
+    background: var(--color-fonto);
+    color: var(--color-texto);
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+._codint-content_files_files_btn{
+    position: sticky;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+._codint-content_files_files_btn buttom{
+    width: 100%;
+    background: #797bf2;
+    color: white;
+    border: 0 solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+._codint-content_files_code{
+    width: 100%;
+}
+ 
+.__console_editor__{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 3px 5px 0px 5px;
+    margin: 0px;
+}
+._codint-content_files_bottom{
+    position: absolute;
+    right: 0;
+}
+
+.__console_editor_archivos { padding-left: 10px; color: #797bf2; }
+.__console_editor_carpeta{ color: #797bf2; background: rgb(148 148 148 / 24%); }
+.__console_editor_carpeta a { color: #fff; }
+
+.__console_editor_icono{
+    padding-right: 5px;
+}
+
+.__console_editor_file_{
+    display: flex;color: white; flex-direction: row;align-items: center;
+}
+.__console_editor_file_ p{
+    margin: 5px 0px 5px 0px;
+    color:var(--color-texto);
+    cursor: default;
+}
+
+
+._codint-content_consola{
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background: var(--color-fondo);
+    flex-direction: column;
+}
+
+._codint-content_settings{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media (max-width: 767px) {
+    ._codint-menu-op-10{
+        display:none !important ;
+    }
+    ._codint-menu-op-11{
+        display:none !important ;
+    }
+    ._codint-content_files_files{
+        width: 40%;
+    }
+}
+.__console_editor_carpeta {  cursor: pointer; list-style: none;}
+.__console_editor_archivos {display: none;}
+.__console_editor_desplegado {display: block; }
+
+
+.console-mensaje p {
+    background: var(--color-terminal);
+    color: var(--color-texto);
+    font-size: 12px;
+    margin: 0px;
+    padding: 2px 5px 0px 5px;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-borde-b);
+}
+.console-mensaje p span {
+    padding-right: 5px;
+}

@@ -1,0 +1,12 @@
+{
+  "en": {
+    "codintFiles": "Files",
+    "codintConsole": "Console",
+    "codintSettings": "Settings" 
+  },
+  "es": {
+    "codintFiles": "Archivos",
+    "codintConsole": "Terminal",
+    "codintSettings": "Configuraciónes" 
+  }
+}
