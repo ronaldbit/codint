@@ -37,11 +37,9 @@
 
 const codint = {
     init: function(elementId, config) {
-        
         const codint = document.getElementById(elementId); 
         if (codint) {
             createDivs();
-            
             const codintLn = config.lang || 'en';
             const codintGetLang = config.getLang || 'codint/js/lang.json';
             
@@ -77,24 +75,18 @@ const codint = {
                 document.querySelector('._codint-content_files_files_tem').innerHTML = data;
                 const container = document.querySelector('.nav-links');
                 container.addEventListener('click', function (event) {
-                    const target = event.target.closest('.toggleable'); // Cambia aquí para seleccionar solo elementos con la clase toggleable
-                    if (target) {
-                        //console.log('Element clicked:'+ target);
-                        toggleList(target);
-                    }
+                    const target = event.target.closest('.toggleable');
+                    if (target) { toggleList(target); }
                 });
                 
             }).catch(error => { console.error('Error:', error); });
-                
-                   
-            const codintEditor = typeof config.editor !== 'undefined' ? config.editor : true;
             
+            const codintEditor = typeof config.editor !== 'undefined' ? config.editor : true;
+            //textarea - vs4 :: future vs5 editor integrad
             if(codintEditor){
-                console.log(codintEditor+' :: editor activo :: Ace editor');
-                
+                //console.log(codintEditor+' :: editor activo :: Ace editor');
             }else{
-                console.log(codintEditor+' :: editor no activo :: usando Textarea editor');
-                 
+                //console.log(codintEditor+' :: editor no activo :: usando Textarea editor');
             } 
             
         } else { console.error(`Element with ID "${elementId}" not found.`); }
@@ -311,7 +303,6 @@ function createDivs() {
         divSettings.textContent = "Configuraciones";
         divContent.appendChild(divSettings);
                 
-                 
     // Agregar los divs al div flotante
     document.getElementById("codint").appendChild(divTop);
     document.getElementById("codint").appendChild(divMenu);
@@ -319,32 +310,16 @@ function createDivs() {
                 
 }
  
- 
-function toggleList(element) {
-    // Toggle la clase showMenu al elemento li
-    element.classList.toggle("showMenu");
-}
-
-function obtenerExtension(archivo) {
-    var partes = archivo.split('/');
-    var nombreArchivo = partes[partes.length - 1];
-    var extension = nombreArchivo.split('.').pop();
-    return extension;
-}   
-
 function open_file(filename) {
     const editorElement = document.getElementById('editor');
     editorElement.innerHTML = ''; // Limpiar el contenido del editor
     
     document.getElementById('_codint-menu-op-c').textContent = ">_ Editor > " + filename; 
-    console.log("Console > Open file " + filename);  
+    console.log("Codint > Open file " + filename);  
     
     fetch('codint/php/code.php', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', }, body: 'archivo=' + encodeURIComponent(filename), })
     .then(response => response.json()) // Parsea la respuesta como JSON
     .then(data => {
-        // Procesa los datos JSON
-        console.log(data);
-
         if (data.tipo === 'imagen') {
                 // Si es una imagen, crear un elemento img
                 const imgElement = document.createElement('img');
@@ -387,8 +362,7 @@ function open_file(filename) {
     .catch(error => console.error('Error:'+ error));
 }
 
-
-
+function toggleList(element) { element.classList.toggle("showMenu"); }
 
 function showDiv(divId, button) {
     // Remover la clase _codint-active de todos los botones
@@ -410,9 +384,6 @@ function showDiv(divId, button) {
         selectedDiv.classList.add('_codint-visible');
         selectedDiv.classList.remove('_codint-oculto');
 }
-
-
- 
 //consola
 var valAutoConsol = 1;
 function logToConsole(message, isTyppe) {
@@ -445,10 +416,7 @@ function logToConsole(message, isTyppe) {
     divContainerConsole.setAttribute("data-action", "enter");
     divContainerConsole.setAttribute("spellcheck", false);
     divContainerConsole.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            // Cuando se presiona Enter, ejecuta la función
-            processInput(divContainerConsole.textContent);
-        }
+        if (event.key === "Enter") { processInput(divContainerConsole.textContent); }
     });
     
     inputContainer.appendChild(divContainer);
@@ -459,46 +427,30 @@ function logToConsole(message, isTyppe) {
 }
 
 function processInput(inputValue) {
-    try {
-        const result = eval(inputValue);
-        
-    } catch (error) {
-        console.error(error);
-    }
+    try {  const result = eval(inputValue); } catch (error) {  console.error(error); }
 }
 
 
 document.addEventListener("DOMContentLoaded", function() { 
+    console.log = function (message) { logToConsole(message,'Mensaje'); };
+    console.warn = function (message) { logToConsole(message, 'Warning'); };
+    console.error = function (message) { logToConsole(message,'Error'); };
     
-// Capturar mensajes de consola
-console.log = function (message) { logToConsole(message,'Mensaje'); };
-
-// Capturar advertencias
-console.warn = function (message) { logToConsole(message, 'Warning'); };
-
-// Capturar errores
-console.error = function (message) { logToConsole(message,'Error'); };
-
-
-console.log('Codint 4.5.156 (default:fron30dxash, 10 August 2023, 24:00 pm)');
-console.log('[© Ronald Ramos - <a herf="https://ronald-ramos.com">Web</a>] - {License for free use.} [awarded to 200.37.57.131]');
-console.warn('Do not delete these lines of code for corresponding rights and int-console information.');
-console.log('This version includes a terminal and a code editor. Future versions will include a section for console settings, and it will be possible to interact with the terminal');
-console.log('This version is under development, if you want to obtain a stable version, access the git repository. thank you!');
-
-function capturarError(message, source, lineno, colno, error) {
-    console.error(error.stack); // Imprime el mensaje de error // console.error(message + ' link ' + source + ' linea ' + lineno +':'+ colno + ' erorr ' + error;);
-    return true;
-}
-// Asigna el manejador de eventos a window.onerror
-window.onerror = capturarError;
-
+    console.log('Codint 4.5.156 (default:fron30dxash, 10 August 2023, 24:00 pm)');
+    console.log('[© Ronald Ramos - <a herf="https://ronald-ramos.com">Web</a>] - {License for free use.} [awarded to 200.37.57.131]');
+    console.warn('Do not delete these lines of code for corresponding rights and int-console information.');
+    console.log('This version includes a terminal and a code editor. Future versions will include a section for console settings, and it will be possible to interact with the terminal');
+    console.log('');
+    
+    function capturarError(message, source, lineno, colno, error) {
+        console.error(error.stack);
+        return true;
+    }window.onerror = capturarError;
  
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-     
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
 });
   
