@@ -2,11 +2,15 @@
   "en": {
     "codintFiles": "Files",
     "codintConsole": "Console",
-    "codintSettings": "Settings" 
+    "codintSettings": "Settings",
+    "codintTextSave": "Update file",
+    "codintTextSaveMini": "save what you edited"
   },
   "es": {
     "codintFiles": "Archivos",
     "codintConsole": "Terminal",
-    "codintSettings": "Configuraciónes" 
+    "codintSettings": "Configuraciónes",
+    "codintTextSave": "Update file",
+    "codintTextSaveMini": "save what you edited"
   }
 }
