@@ -34,7 +34,7 @@
   * @codint carga útil una función para llamar con parámetros (require, exports, module)
   */
 
-
+var codintVs = '4.5.156';
 const codint = {
     init: function(elementId, config) {
         const codint = document.getElementById(elementId); 
@@ -208,7 +208,7 @@ function createDivs() {
             //text1  
             var divMenu3op1 = document.createElement("p");
             divMenu3op1.classList.add("_codint-menu-op-10", "op"); 
-            divMenu3op1.textContent = "Vs. 3.2.4.0";
+            divMenu3op1.textContent = "Vs. "+codintVs;
             divMenu3.appendChild(divMenu3op1);
             //space    
             var divMenu3opBar = document.createElement("p");
@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.warn = function (message) { logToConsole(message, 'Warning'); };
     console.error = function (message) { logToConsole(message,'Error'); };
     
-    console.log('Codint 4.5.156 (default:fron30dxash, 10 August 2023, 24:00 pm)');
+    console.log('Codint "+codintVs+" (default:fron30dxash, 10 August 2023, 24:00 pm)');
     console.log('[© Ronald Ramos - <a herf="https://ronald-ramos.com">Web</a>] - {License for free use.} [awarded to 200.37.57.131]');
     console.warn('Do not delete these lines of code for corresponding rights and int-console information.');
     console.log('This version includes a terminal and a code editor. Future versions will include a section for console settings, and it will be possible to interact with the terminal');
