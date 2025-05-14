@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[https://codint.ronaldbit.com/codint/img/codint-banner.png](https://raw.githubusercontent.com/ronaldbit/codint/refs/heads/main/codint/img/codint-banner.png)" width="550"/>
+  <img src="https://raw.githubusercontent.com/ronaldbit/codint/refs/heads/main/codint/img/codint-banner.png" width="550"/>
 </p>
 
 ![Preview](https://codint.ronaldbit.com/codint/img/codint.gif)
