@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://codint.ronald-ramos.com/codint/img/codint-banner.png" width="550"/>
+  <img src="https://codint.ronaldbit.com/codint/img/codint-banner.png" width="550"/>
 </p>
 
-![Preview](https://codint.ronald-ramos.com/codint/img/codint.gif)
+![Preview](https://codint.ronaldbit.com/codint/img/codint.gif)
 
 Codint proporciona una interfaz de administración de archivos dentro de un directorio específico y puede usarse para cargar, eliminar, obtener una vista previa, cambiar el nombre y editar sus archivos. Se puede utilizar como una aplicación independiente.
 
@@ -12,18 +12,18 @@ url: https://codint.ronald-ramos.com/
 
 ## Features
 
-Please refer to our docs at [https://codint.ronald-ramos.com/features](https://codint.ronald-ramos.com/features)
+Please refer to our docs at [https://codint.ronald-ramos.com/features](https://codint.ronaldbit.com/features)
 
 ## Install
 
-Para obtener instrucciones de instalación, consulte nuestros documentos en [https://codint.ronald-ramos.com/installation](https://codint.ronald-ramos.com/installation).
+Para obtener instrucciones de instalación, consulte nuestros documentos en [https://codint.ronaldbit.com/installation](https://codint.ronaldbits.com/installation).
 
 ## Configuration
 
 Nosotros amablemente proporcionamos soporte CDN para CSS y JavaScript. Simplemente use estos enlaces.
 Copie y pege en el apartado de Head.
 ```
-<link rel="stylesheet" href="https://codint.ronald-ramos.com/codint/css/codint.css"> 
+<link rel="stylesheet" href="https://codint.ronaldbit.com/codint/css/codint.css"> 
 ```
 
 Nos ubicamos al final de nuestra estructura y colocamos este div >
@@ -33,8 +33,8 @@ Nos ubicamos al final de nuestra estructura y colocamos este div >
 
 Copie estos Scripts despues del anterior codigo (div)
 ```
-<script src="https://codint.ronald-ramos.com/codint/js/ace.js" type="text/javascript" charset="utf-8"></script> 
-<script src="https://codint.ronald-ramos.com/codint/js/codint.js" type="text/javascript"></script>
+<script src="https://codint.ronaldbit.com/codint/js/ace.js" type="text/javascript" charset="utf-8"></script> 
+<script src="https://codint.ronaldbit.com/codint/js/codint.js" type="text/javascript"></script>
 ```
 
 Puede assignar una configuración inicial: 
@@ -81,7 +81,7 @@ Copie el HTML a continuación para comenzar a trabajar con un documento Bootstra
     <title>Codint Example</title>
 
     <!-- Codint Css -->
-    <link rel="stylesheet" href="https://codint.ronald-ramos.com/codint/css/codint.css"> 
+    <link rel="stylesheet" href="https://codint.ronaldbit.com/codint/css/codint.css"> 
 
   </head>
   <body>
