@@ -8,11 +8,11 @@ Codint proporciona una interfaz de administración de archivos dentro de un dire
 
 ## Demo
 
-url: https://codint.ronald-ramos.com/
+url: https://codint.ronaldbit.com/
 
 ## Features
 
-Please refer to our docs at [https://codint.ronald-ramos.com/features](https://codint.ronaldbit.com/features)
+Please refer to our docs at [https://codint.ronaldbit.com/features](https://codint.ronaldbit.com/features)
 
 ## Install
 
